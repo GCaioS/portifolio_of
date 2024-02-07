@@ -24,7 +24,7 @@
 }
 
 .navbar {
-    background-image: url(/img/banner.gif);
+    background-image: url(./img/banner.gif);
     height: 750px;
     position: relative;
     background-size: 100%;

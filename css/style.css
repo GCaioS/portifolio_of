@@ -1,0 +1,151 @@
+/*menu e banner*/
+
+.corpo {
+    background-color: #0a0b0d;
+    height: 2000px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.collapse {
+    padding-left: 50px;
+}
+
+.carousel-inner {
+    margin: auto;
+    padding-top: 50px;
+}
+
+.carousel {
+    width: 70vw;
+    margin: auto;
+}
+
+.navbar {
+    background-image: url(/img/banner.gif);
+    height: 750px;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    position: absolute;
+    top: 0;
+    padding: 34px !important;
+}
+
+.form-control {
+    background-color: gray !important;
+    border: none !important;
+}
+
+.nav-item {
+    color: white !important;
+}
+
+/*segundo banner*/
+
+.col {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+}
+
+.img-menu {
+    width: 100px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divisão {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px;
+    transform: translateY(-150px);
+}
+
+.menu-2 {
+    transform: translateY(-100px);
+}
+
+.col h3 {
+    color: rgb(82, 82, 82);
+    padding-top: 30px;
+    
+}
+
+.img-2-menu {
+    width: 180px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    padding-top: 38px;
+}
+
+/*Sobre mim*/
+
+.sobre-mim {
+    height: 400px;
+    display: flex;
+    background-color: #0b0c0e;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+.sobre-mim p {
+    width: 400px;
+    text-align: justify;
+    margin-left: auto;
+    padding-right: 50px;
+    border-style:double;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    color: rgb(82, 82, 82);
+    font-size: 12px;
+}
+
+.título {
+    background-color: #0b0c0e;
+    margin: 0;
+    color: rgb(82, 82, 82);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+/*Projetos*/
+
+.projetos {
+    height: 500px;
+    text-align: center;
+}
+
+.titulo2 {
+    background-color: #0a0b0d;
+    margin: 0;
+    color: rgb(82, 82, 82);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.botão {
+    padding: 10px;
+    background-color: rgb(4, 4, 71);
+    border-radius: 30px;
+    color: rgb(104, 104, 192);
+    border: none;
+    font-size: 10px;
+}

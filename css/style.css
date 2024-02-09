@@ -156,9 +156,10 @@
 }
 
 .accordion-item {
-    background-color: black !important;
+    background-color: rgb(146, 146, 146) !important;
 }
 
 .accordion-button {
-    background-color: #0b0c0e !important;
+    background-color: #1d1d1d !important;
+    color: white !important;
 }

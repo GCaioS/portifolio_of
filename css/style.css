@@ -150,3 +150,15 @@
 
 /*Acordeon*/
 
+.accordion {
+    width: 50% !important;
+    margin: auto;
+}
+
+.accordion-item {
+    background-color: black !important;
+}
+
+.accordion-button {
+    background-color: #0b0c0e !important;
+}

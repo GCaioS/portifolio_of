@@ -153,6 +153,7 @@
 .accordion {
     width: 50% !important;
     margin: auto;
+    margin-top: 50px;
 }
 
 .accordion-item {

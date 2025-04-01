@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de Navegação Superior</title>
+    <title>Projetos</title>
     <style>
         * {
             margin: 0;
@@ -62,26 +62,22 @@
                 display: flex;
             }
         }
-        /* Estilos para o carrossel */
         .carousel {
             width: 100%;
             max-width: 1000px;
-            max-height: 500px;
+            height: 562px;
             margin: 20px auto;
-            margin-top: 100px;
             overflow: hidden;
             position: relative;
-            height: 300px; /* Defina a altura desejada */
+            margin-top: 100px;
         }
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
-            height: 100%; /* Ajusta a imagem à altura definida */
-            object-fit: cover; /* Garante que a imagem cubra toda a área sem distorcer */
         }
         .carousel-images img {
             width: 100%;
+            object-fit: cover;
         }
         .carousel-btn {
             position: absolute;
@@ -98,6 +94,43 @@
         }
         .next {
             right: 10px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .card p {
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
     <script>
@@ -139,7 +172,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#" class="logo">Caio Guarino</a>
+        <a href="#" class="logo">GS Tech</a>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -148,15 +181,34 @@
             <a href="#contact">Contato</a>
         </div>
     </div>
-    
     <div class="carousel">
         <div class="carousel-images">
-            <img src="/img/js.png" alt="Slide 1">
-            <img src="/img/mysql.png" alt="Slide 2">
-            <img src="/img/python.png" alt="Slide 3">
+            <img src="/img/1.png" alt="Slide 1">
+            <img src="/img/2.png" alt="Slide 2">
+            <img src="/img/3.png" alt="Slide 3">
         </div>
         <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
         <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Cadastro de Produtos">
+            <h3>Cadastro de Produtos</h3>
+            <p>Sistema para gerenciar o cadastro de produtos.</p>
+            <a href="#" class="btn">Ver Mais</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Consulta de Estoque">
+            <h3>Consulta de Estoque</h3>
+            <p>Ferramenta para consultar o estoque disponível.</p>
+            <a href="#" class="btn">Ver Mais</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="Lista Técnica">
+            <h3>Lista Técnica</h3>
+            <p>Criação e gerenciamento de listas técnicas.</p>
+            <a href="#" class="btn">Ver Mais</a>
+        </div>
     </div>
 </body>
 </html>

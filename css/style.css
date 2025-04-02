@@ -127,3 +127,39 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
+
+.apresentacao_erp h3 {
+    margin-left: 20%;
+    font-size: 50px;
+    color: #575757;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #093e75;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

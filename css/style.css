@@ -67,7 +67,7 @@ body {
 /* Estilos para o carrossel */
 .carousel {
     width: 100%;
-    max-width: 1000px;
+    max-width: 80%;
     height: 562px;
     margin: 20px auto;
     overflow: hidden;

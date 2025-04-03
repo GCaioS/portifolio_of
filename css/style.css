@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #fbf7ff, #f6efff);
+}
+.navbar {
+    position: absolute; /* Sobrepõe o vídeo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2; /* Garante que fique acima do vídeo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+.navbar a:hover {
+    background-color: #575757;
+}
+.nav-links {
+    display: flex;
+}
+.nav-links a{
+    display: flex;
+    color: rgb(182, 176, 176)
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    .nav-links a {
+        text-align: center;
+        padding: 10px;
+        color: rgb(182, 176, 176)
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+.carousel {
+    width: 100%;
+    max-width: 1000px;
+    height: 562px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-images img {
+    width: 100%;
+    object-fit: cover;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    margin-top: 80px;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+.card h3 {
+    margin: 10px 0;
+    margin-top: 20px;
+}
+.card p {
+    color: #666;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.apresentacao_erp {
+    margin-top: 100px;
+}
+.apresentacao_erp h3 {
+    margin-left: 15%;
+    font-size: 50px;
+    color: #575757;
+}
+
+.apresentacao_erp p {
+    margin-top: 30px;
+    margin-left: 15%;
+    font-size: 16;
+    color: #575757;
+    text-align: justify;
+    max-width: 30%;
+    line-height: 30px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #093e75;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+section div.bg-section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+section div.bg-section video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+section div.box {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+}
+section div.box div.conteudo img{
+    width: 80%;
+    min-width: 300px;
+}
+
+.conteudo p {
+    margin-top: 30px;
+    font-size: 24px;
+}
+.box img{
+    max-width: 500px;
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+}
+@media screen and(max-width:1024px){
+    section div.box {
+        width: 100%;
+        padding: 2%;
+        background: rgb(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+    section div.box div.conteudo{
+        width: 100%;
+        text-align: center;
+    }
+}

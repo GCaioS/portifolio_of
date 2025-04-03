@@ -6,227 +6,6 @@
     <title>Projetos</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-}
-.navbar {
-    position: absolute; /* Sobrepõe o vídeo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2; /* Garante que fique acima do vídeo */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-}
-.navbar a:hover {
-    background-color: #575757;
-}
-.nav-links {
-    display: flex;
-}
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-    .nav-links a {
-        text-align: center;
-        padding: 10px;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-}
-.carousel {
-    width: 100%;
-    max-width: 1000px;
-    height: 562px;
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-    margin-top: 50px;
-}
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.carousel-images img {
-    width: 100%;
-    object-fit: cover;
-}
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-.prev {
-    left: 10px;
-}
-.next {
-    right: 10px;
-}
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    margin-top: 80px;
-}
-.card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-}
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-.card h3 {
-    margin: 10px 0;
-    margin-top: 20px;
-}
-.card p {
-    color: #666;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.apresentacao_erp h3 {
-    margin-left: 20%;
-    font-size: 50px;
-    color: #575757;
-}
-
-/* Estilo para o rodapé */
-footer {
-    background-color: #093e75;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-section {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow-y: hidden;
-}
-
-section div.bg-section{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-}
-
-section div.bg-section video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-section div.box {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-section div.box div.conteudo img{
-    width: 80%;
-    min-width: 300px;
-}
-.box img{
-    max-width: 500px;
-    color: white;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-@media screen and(max-width:1024px){
-    section div.box {
-        width: 100%;
-        padding: 2%;
-        background: rgb(0, 0, 0, 0.4);
-        z-index: 1;
-    }
-    section div.box div.conteudo{
-        width: 100%;
-        text-align: center;
-    }
-}
     </style>
     <script>
         function toggleMenu() {
@@ -257,11 +36,11 @@ section div.box div.conteudo img{
 
         function autoSlide() {
             nextSlide();
-            setTimeout(autoSlide, 3000);
+            setTimeout(autoSlide, 10000);
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(autoSlide, 3000);
+            setTimeout(autoSlide, 10000);
         });
     </script>
 </head>
@@ -271,7 +50,7 @@ section div.box div.conteudo img{
             <video src="./img/bg_section.mp4" autoplay loop muted></video>
 
             <div class="navbar">
-                <a href="#" class="logo">GS Tech</a>
+                <a href="#" class="logo">GS Enterprise</a>
                 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 <div class="nav-links">
                     <a href="#home">Home</a>
@@ -291,12 +70,15 @@ section div.box div.conteudo img{
 
     <div class="carousel">
         <div class="carousel-images">
-            <img src="./img/1.png" alt="Slide 1">
             <img src="./img/2.png" alt="Slide 2">
             <img src="./img/3.png" alt="Slide 3">
         </div>
         <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
         <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="apresentacao_erp">
+        <h3>Gestão Industrial</h3>
+        <p>Estudado e desenvolvido para atender desde as necessidades mais básicas, até atividades mais complexas dentro de grandes empresas, nosso sistema busca entregar por meio de interfaces intuitivas e amigaveis, a melhor experioencia para o usuário para que o mesmo possa usufruir de maneira descomplicada as inúmeras funcionalidades do sistema.</p>
     </div>
     <div class="container">
         <div class="card">
@@ -317,10 +99,6 @@ section div.box div.conteudo img{
             <p>Tenha suporte tecnico do nosso time para criar automações.</p>
             <a href="#" class="btn">Ver Mais</a>
         </div>
-    </div>
-    <div class="apresentacao_erp">
-        <h3>Gestão Industrial</h3>
-        <p>Estudado e desenvolvido para atender desde as necessidades mais básicas, até atividades mais complexas dentro de grandes empresas, nosso sistema busca entregar por meio de interfaces intuitivas e amigaveis, a melhor experioencia para o usuário para que o mesmo possa usufruir de maneira descomplicada as inúmeras funcionalidades do sistema.</p>
     </div>
     <!-- Rodapé -->
     <footer>

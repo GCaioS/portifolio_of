@@ -8,43 +8,79 @@
     <style>
     </style>
     <script>
+        window.addEventListener('scroll', function() {
+            const carousel = document.querySelector('.carousel');
+            const carouselPosition = carousel.getBoundingClientRect().top;
+
+            // Se o carrossel estiver visível na tela (a posição superior dele for menor que a altura da tela)
+            if (carouselPosition < window.innerHeight) {
+                carousel.classList.add('active');
+        }
+        });
+        // Função para alternar a visibilidade do menu em dispositivos móveis
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
-
+    
         let currentIndex = 0;
+    
+        // Função para exibir o slide com base no índice
         function showSlide(index) {
             const slides = document.querySelectorAll('.carousel-images img');
             if (index >= slides.length) {
-                currentIndex = 0;
+                currentIndex = 0; // Vai para o primeiro slide
             } else if (index < 0) {
-                currentIndex = slides.length - 1;
+                currentIndex = slides.length - 1; // Vai para o último slide
             } else {
-                currentIndex = index;
+                currentIndex = index; // Índice válido
             }
             document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
         }
-
+    
+        // Função para mostrar o próximo slide
         function nextSlide() {
             showSlide(currentIndex + 1);
         }
-
+    
+        // Função para mostrar o slide anterior
         function prevSlide() {
             showSlide(currentIndex - 1);
         }
-
+    
+        // Função para iniciar a troca automática de slides
         function autoSlide() {
-            nextSlide();
-            setTimeout(autoSlide, 10000);
+            nextSlide(); // Avança para o próximo slide
         }
-
+    
+        // Aguardar o carregamento do DOM e iniciar o auto slide
         document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(autoSlide, 10000);
+            setInterval(autoSlide, 10000); // Avança os slides a cada 10 segundos
         });
+    
+        // Usando Intersection Observer para observar a visibilidade do carrossel
+        const carousel = document.querySelector('.carousel');
+    
+        // Função a ser chamada quando o carrossel entrar ou sair da tela
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Quando o carrossel entra na visualização, adiciona a classe "active"
+                    entry.target.classList.add('active');
+                } else {
+                    // Quando o carrossel sai da visualização, remove a classe "active"
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.5 }); // O carrossel será considerado visível quando 50% dele aparecer na tela
+    
+        // Inicia a observação do carrossel
+        observer.observe(carousel);
     </script>
+    
 </head>
 <body>
+    <!--Apresentação!-->
     <section>
         <div class="bg-section">
             <video src="./img/bg_section.mp4" autoplay loop muted></video>
@@ -68,6 +104,7 @@
         </div>
     </section>
 
+    <!--Carrossel!-->
     <div class="carousel">
         <div class="carousel-images">
             <img src="./img/2.png" alt="Slide 2">
@@ -76,6 +113,9 @@
         <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
         <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
     </div>
+
+
+
     <div class="apresentacao_erp">
         <h3>Gestão Industrial</h3>
         <p>Estudado e desenvolvido para atender desde as necessidades mais básicas, até atividades mais complexas dentro de grandes empresas, nosso sistema busca entregar por meio de interfaces intuitivas e amigaveis, a melhor experioencia para o usuário para que o mesmo possa usufruir de maneira descomplicada as inúmeras funcionalidades do sistema.</p>
@@ -100,6 +140,9 @@
             <a href="#" class="btn">Ver Mais</a>
         </div>
     </div>
+
+
+
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">

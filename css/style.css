@@ -64,6 +64,7 @@ body {
         display: flex;
     }
 }
+/* Estilos para o carrossel */
 .carousel {
     width: 100%;
     max-width: 1000px;
@@ -73,15 +74,27 @@ body {
     position: relative;
     margin-top: 50px;
     border-radius: 25px;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    transition: transform 2.5s ease, opacity 0.5s ease;
 }
+
+.carousel.active {
+    opacity: 1; /* Fica visível quando a classe "active" for adicionada */
+    transform: translateY(0); /* Move para a posição original (em sua posição normal) */
+}
+
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .carousel-images img {
     width: 100%;
     object-fit: cover;
 }
+
+/* Botões do carrossel */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -92,12 +105,27 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+
 .prev {
     left: 10px;
 }
+
 .next {
     right: 10px;
 }
+
+/* Efeito de animação "subindo" quando entra na tela */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Começa de baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Fica na posição original */
+    }
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

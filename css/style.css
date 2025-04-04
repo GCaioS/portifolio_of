@@ -73,7 +73,7 @@ body {
     overflow: hidden;
     position: relative;
     margin-top: 50px;
-    border-radius: 25px;
+    border-radius: 10px;
     opacity: 0; /* Começa invisível */
     transform: translateY(50px); /* Começa deslocado para baixo */
     transition: transform 2.5s ease, opacity 0.5s ease;
@@ -165,23 +165,70 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
+/* Container geral */
 .apresentacao_erp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-top: 100px;
-}
-.apresentacao_erp h3 {
-    margin-left: 15%;
-    font-size: 50px;
-    color: #575757;
+    width: 100%;
 }
 
+.apresentacao_erp h3 {
+    font-size: 50px;
+    color: #575757;
+    transform: translateX(-310px);
+}
+
+/* Layout lado a lado */
+.apresentacao_erp-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+}
+
+/* Texto */
 .apresentacao_erp p {
-    margin-top: 30px;
-    margin-left: 15%;
-    font-size: 16;
+    font-size: 20px;
     color: #575757;
     text-align: justify;
     max-width: 30%;
     line-height: 30px;
+}
+
+/* Linha divisória */
+.apresentacao_erp-divider {
+    width: 2px;
+    height: 200px;
+    background-color: #575757;
+}
+
+/* Container da imagem para aplicar o fade-in */
+.apresentacao_erp-image {
+    position: relative;
+    max-width: 500px;
+}
+
+/* Imagem */
+.apresentacao_erp-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Efeito de fade-in na parte inferior da imagem */
+.apresentacao_erp-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura do fade */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    pointer-events: none;
 }
 
 /* Estilo para o rodapé */
